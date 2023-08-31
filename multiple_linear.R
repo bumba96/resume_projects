@@ -1,0 +1,8 @@
+head(mydata)
+model = lm(mydata$Sales~mydata$Quantity + mydata$Discount + mydata$`Total Cost`, data=mydata)
+summary(model)
+dwtest(model)
+library(lmtest)
+install.packages("lmtest")
+library(lmtest)
+dwtest(model)
